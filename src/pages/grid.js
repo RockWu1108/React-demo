@@ -1,19 +1,19 @@
 import React from 'react';
 const styles = {
-about: {
+home: {
 	padding: '50px',
 	textAlign: 'center',
-	backgroundColor: '#474e5d',
+	backgroundColor: '#28462f',
 	color: 'white',
 }
 };
+const Grid = () => {
 
-export default class Grid extends React.Component {
-render() {
-	return <div style={styles.about}>
-	<h1>About Us Page</h1>
-	
-	<p>Some text about who we are and what we do.</p>
-</div>;
-}
-}
+return(
+	<div style={styles.home}>
+		<h1>Home Page</h1>
+		<p>This is the Landing Page of the Application</p>
+	</div>
+)}
+
+export default Grid

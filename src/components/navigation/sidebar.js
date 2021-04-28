@@ -4,7 +4,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import SingleItem from './singleItem';
 import MutiItem from './mutiItem';
 
-export default function Sidebar() {
+const Sidebar = () => {
 
    //帳號管理List
   const accounts = [
@@ -40,7 +40,7 @@ export default function Sidebar() {
 
     {
         name: '狀態監控',
-         path: '/grid',
+         path: '/nodeState',
          icon :<InboxIcon/>
     },
   ]
@@ -71,3 +71,4 @@ export default function Sidebar() {
   </List>
   );
 }
+export default Sidebar

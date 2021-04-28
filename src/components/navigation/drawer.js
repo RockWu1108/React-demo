@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function MarerialUIDrawer() {
+const MarerialUIDrawer = () => {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -135,3 +135,4 @@ export default function MarerialUIDrawer() {
     </div>
   );
 }
+export default MarerialUIDrawer
