@@ -1,7 +1,6 @@
 import React , {useState, useEffect} from 'react'
 import BoxItem from '../components/Item/boxItem'
 import TableItem from '../components/Item/tableItem'
-const axios = require('axios');
 
 
 const NodeState =() => {
@@ -16,14 +15,12 @@ const NodeState =() => {
     const loadMoreCoin = () =>{
         fetch(NODE_API)
         .then(res => {
-            return res.json();
+            return res.json(); 
         }).then(data =>{
+            console.log(data);
             setNodeData(nodeData.concat(data));
         })
     }
-
-
-
 
     return (
         <div>

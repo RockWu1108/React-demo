@@ -13,7 +13,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 const useStyles = makeStyles((theme) => ({
    right: {
-     marginLeft: 'auto'
+     marginLeft: 'auto',
    }
  }));
 
@@ -23,7 +23,7 @@ const BoxItem = () => {
 
     return (
 
-      <div style={{marginLeft : "60px"  , marginRight : "60px" , boxShadow: "2px 2px 5px #bbb" , paddingLeft:"10px"}}>
+      <div style={{marginLeft : "60px"  , marginRight : "60px" , boxShadow: "2px 2px 5px #bbb" , paddingLeft:"10px" , marginTop:"30px"}}>
          <Grid container direction="row" alignItems="center" spacing={3}>
                <Grid item >
                   <CheckCircleIcon style={{ color: green[500] , fontSize: 40 }}/>
@@ -33,7 +33,7 @@ const BoxItem = () => {
                   <Typography>運作正常</Typography>
                </Grid>
 
-               <Grid item >
+                <Grid item >
                   <CancelIcon action style={{ color :"#EA0000" , fontSize: 40 }}/>
                </Grid>
 
@@ -51,7 +51,7 @@ const BoxItem = () => {
 
 
 
-               <Grid item  direction="row" className={classes.right}>
+               <Grid item  className={classes.right}>
                   <IconButton aria-label="delete" className={classes.margin} size="small">
                      <SettingsIcon style={{fontSize: 40 }}/>
                   </IconButton>

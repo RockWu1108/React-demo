@@ -43,6 +43,12 @@ const Sidebar = () => {
          path: '/nodeState',
          icon :<InboxIcon/>
     },
+
+    {
+      name: 'Quorum Maker',
+       path: '/dashboard',
+       icon :<InboxIcon/>
+    }
   ]
 
   return (

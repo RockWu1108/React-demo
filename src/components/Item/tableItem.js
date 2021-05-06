@@ -12,6 +12,8 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import CancelIcon from '@material-ui/icons/Cancel';
 import ReportProblemIcon from '@material-ui/icons/ReportProblem';
 import { green } from '@material-ui/core/colors';
+import {Link} from 'react-router-dom';
+
 const useStyles = makeStyles({
   root: {
     width: 'auto',
@@ -65,7 +67,6 @@ const columns = [
           <TableBody>
             
             {tableData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row ,index) => {
-              console.log("sadsa",typeof(row.active))
              return (
                
                 <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
@@ -82,8 +83,14 @@ const columns = [
                     {row.nodeName}
                   </TableCell>
 
-                  <TableCell align="left">
-                    {row.ip}
+                  <TableCell 
+                  component={Link} 
+                  to="./dashboard" 
+                  align="left"
+                  data = {"213"}
+                  >
+                 
+                  {row.ip}
                   </TableCell>
 
                   <TableCell align="left">
