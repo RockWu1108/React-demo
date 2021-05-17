@@ -13,7 +13,6 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import ReportProblemIcon from '@material-ui/icons/ReportProblem';
 import { green } from '@material-ui/core/colors';
 import {Link} from 'react-router-dom';
-
 const useStyles = makeStyles({
   root: {
     width: 'auto',
@@ -83,16 +82,11 @@ const columns = [
                     {row.nodeName}
                   </TableCell>
 
-                  <TableCell 
-                  component={Link} 
-                  to="./dashboard" 
-                  align="left"
-                  data = {"213"}
-                  >
                  
-                  {row.ip}
+                  <TableCell align="left">
+                     {row.ip}
                   </TableCell>
-
+                  
                   <TableCell align="left">
                     {2131}
                   </TableCell>
