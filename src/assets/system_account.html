@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>經濟部應用服務串接平台管理系統</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+        <!--SEO Meta Tags-->
+        <meta name="description" content="網頁描述內容，最理想的字數約120字​" />
+        <meta name="keywords" content="符合網頁內容的目標關鍵字，中文字數28字以內（英文字數56字）​" />
+        <meta name="author" content="關貿網路股份有限公司版權所有​" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+        <!-- Plugins css -->
+        <link href="assets/libs/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" type="text/css" />
+
+		<!-- App css -->
+		<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="assets/css/app.css" rel="stylesheet" type="text/css"/>
+        <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+        
+    </head>
+
+    <body class="loading">
+
+        <!-- Begin page -->
+        <div id="wrapper">
+
+             <!-- ========== Left Sidebar Start 左側整個區域========== -->
+            <div class="left-side-menu">
+
+                <a class="button-menu-mobile waves-effect waves-light d-none d-lg-inline-block btn btn-warning">
+                    <i class="fas fa-bars"></i>
+                </a>
+
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="index.html" class="logo logo-light text-center">
+                        <span class="logo-sm">
+                            <img src="assets/images/logo-sm.png" alt="" height="45">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="assets/images/logo-sm.png" alt="" height="36">
+                            經濟部應用服務串接平台管理系統
+                        </span>
+                    </a>
+                </div>
+
+                <div class="h-100" data-simplebar>
+
+                    <!--- Sidemenu 左側選單-->
+                    <div id="sidebar-menu">
+
+                        <ul id="side-menu">
+                            <!-- 帳號管理 -->
+                            <li>
+                                <a href="#sidebarAccount" data-toggle="collapse">
+                                    <i class="fal fa-user-cog"></i>
+                                    <span> 帳號管理 </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <div class="collapse" id="sidebarAccount">
+                                    <ul class="nav-second-level">
+                                        <li>
+                                            <a href="javascript:void(0);">使用者維護管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0);">個人資料維護管理</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!--/ 帳號管理 -->
+                            <!-- 組織管理 -->
+                            <li>
+                                <a href="organization.html">
+                                    <i class="fal fa-network-wired"></i>
+                                    <span> 組織管理 </span>
+                                </a>
+                            </li>
+                            <!-- 組織管理 -->
+                            <!-- 權限管理 -->
+                            <li>
+                                <a href="authority.html">
+                                    <i class="fal fa-user-lock"></i>
+                                    <span> 權限管理 </span>
+                                </a>
+                            </li>
+                            <!--/ 權限管理 -->
+                            <!-- 帳號清查管理 -->
+                            <li>
+                                <a href="#sidebarAccountInventory" data-toggle="collapse">
+                                    <i class="fal fa-users-cog"></i>
+                                    <span> 帳號清查管理 </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <div class="collapse" id="sidebarAccountInventory">
+                                    <ul class="nav-second-level">
+                                        <li>
+                                            <a href="account_inventory.html">清查作業</a>
+                                        </li>
+                                        <li>
+                                            <a href="notification.html">通知信維護</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!--/ 帳號清查管理 -->
+                            <!-- 區塊鏈管理 -->
+                            <li>
+                                <a href="#sidebarBlockchain" data-toggle="collapse">
+                                    <i class="fab fa-connectdevelop"></i>
+                                    <span> 區塊鏈管理 </span>
+                                    <span class="menu-arrow"></span>
+                                </a>
+                                <div class="collapse" id="sidebarBlockchain">
+                                    <ul class="nav-second-level">
+                                        <li>
+                                            <a href="system_account.html">連線帳號管理</a>
+                                        </li>
+                                        <li>
+                                            <a href="status.html">狀態監控</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!--/ 區塊鏈管理 -->
+                            <!-- 書證管理 -->
+                            <li>
+                                <a href="documentary.html">
+                                    <i class="fal fa-id-card"></i>
+                                    <span> 書證管理 </span>
+                                </a>
+                            </li>
+                            <!--/ 書證管理 -->
+                            <!-- 日誌管理 -->
+                            <li>
+                                <a href="log.html">
+                                    <i class="fal fa-file-upload"></i>
+                                    <span> 日誌管理 </span>
+                                </a>
+                            </li>
+                            <!-- 日誌管理 -->
+                        </ul>
+
+                    </div>
+                    <!-- /Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+
+                    <!-- Topbar Start 上方選單-->
+                    <div class="navbar-custom">
+                        <div class="container-fluid">
+    
+                            <ul class="list-unstyled topnav-menu float-right mb-0">
+
+                                
+                                <!-- 回首頁 -->
+                                <li class="dropdown">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" href="index.html">
+                                        <i class="fas fa-home"></i>&nbsp;首頁
+                                    </a>
+                                </li>
+                                <!--/ 回首頁 -->
+                                
+                                <!-- 全螢幕 -->
+                                <li class="dropdown d-none d-lg-inline-block">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" data-toggle="fullscreen" href="#">
+                                        <i class="fe-maximize noti-icon"></i>&nbsp;全螢幕
+                                    </a>
+                                </li>
+                                <!--/ 全螢幕 -->
+
+                                <!-- 系統操作手冊-->
+                                <li class="dropdown d-none d-lg-inline-block">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect waves-light" href="#">
+                                        <i class="far fa-file-alt"></i>&nbsp;系統操作手冊
+                                    </a>
+                                </li>
+                                <!--/ 系統操作手冊-->
+                                
+                                <!-- 使用者下拉選單 -->
+                                <li class="dropdown notification-list topbar-dropdown">
+                                    <a class="nav-link dropdown-toggle nav-user mr-0 waves-effect waves-light" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                        <i class="fas fa-user"></i>&nbsp;abcd123456&nbsp;<i class="mdi mdi-chevron-down"></i> 
+                                        <!-- <span class="pro-user-name ml-1">
+                                           使用者：abc123&nbsp;<i class="mdi mdi-chevron-down"></i> 
+                                        </span> -->
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+    
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <i class="ri-account-circle-line"></i>
+                                            <span>個人資料</span>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <i class="ri-settings-3-line"></i>
+                                            <span>系統設定</span>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <i class="ri-lock-line"></i>
+                                            <span>修改密碼</span>
+                                        </a>
+
+                                        <div class="dropdown-divider"></div>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <i class="ri-logout-box-line"></i>
+                                            <span>登出</span>
+                                        </a>
+    
+                                    </div>
+                                </li>       
+                                <!--/ 使用者下拉選單 -->   
+    
+                            </ul>
+    
+                            <!-- 漢堡選單 -->
+                            <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                                <li class="d-block d-lg-none">
+                                    <button class="button-menu-mobile waves-effect waves-light">
+                                        <i class="fe-menu"></i>
+                                    </button>
+                                </li>
+
+                                <li>
+                                    <!-- Mobile menu toggle (Horizontal Layout)-->
+                                    <a class="navbar-toggle nav-link" data-toggle="collapse" data-target="#topnav-menu-content">
+                                        <div class="lines">
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                        </div>
+                                    </a>
+                                    <!-- End mobile menu toggle-->
+                                </li>   
+                            </ul>
+                            <!--/ 漢堡選單 -->
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                    <!-- /Topbar 上方選單-->
+
+                     <!-- Start Content 放內容-->
+                    <div class="container-fluid">
+
+                        <!-- 放內容 -->
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- page title -->
+                                <div class="page-title-box mb-2">
+                                    <h4 class="page-title invisible"><i class="fas fa-home mr-1"></i>首頁</h4>
+                                    <div class="page-title-right">
+                                        <ol class="breadcrumb m-0">
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);"><i class="fas fa-home mr-1"></i>首頁</a></li>
+                                            <li class="breadcrumb-item"><a href="javascript: void(0);">區塊鏈管理</a></li>
+                                            <li class="breadcrumb-item active">連線帳號管理</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <!--/ page title -->
+
+                                <!-- 上方標題 -->
+                                <h2 class="header-title">連線帳號管理</h2>
+                                <!--/ 上方標題 -->
+
+                                <!-- 中間內容區 -->
+                                <div class="rim">
+                                    <div class="card glass-content">
+                                        <div class="card-body">
+                                            <!-- 副標 -->
+                                            <h2 class="header-title">帳號清單<button type="button" class="btn btn-outline-primary btn-rounded waves-effect waves-light ml-1" data-toggle="modal" data-target=".export_modal"><i class="fal fa-plus mr-1"></i>新增一筆</button></h2>
+                                             <!--/ 副標 -->
+
+                                            <!-- 表格 -->
+                                            <div class="table-responsive">
+                                                <table id="demo-foo-pagination" class="table mb-0 table-striped table-hover" data-page-size="10">
+                                                    <thead>
+                                                    <tr>
+                                                        <th>序號</th>
+                                                        <th data-toggle="true" data-sort-ignore="true">服務名稱</th>
+                                                        <th data-hide="all">機關名稱</th>
+                                                        <th>連線帳號ID</th>
+                                                        <th data-hide="all">區塊鏈ID</th>
+                                                        <th>狀態</th>
+                                                        <th data-sort-ignore="true">功能</th>
+                                                    </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <!-- 1 -->
+                                                        <tr>
+                                                            <td class="text-center">1</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>商業司</td>
+                                                            <td class="text-center">BB001</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-danger text-center">停用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 1 -->
+
+                                                        <!-- 2 -->
+                                                        <tr>
+                                                            <td class="text-center">2</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>智慧局</td>
+                                                            <td class="text-center">BB002</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 2 -->
+
+                                                        <!-- 3 -->
+                                                        <tr>
+                                                            <td class="text-center">3</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>能源局</td>
+                                                            <td class="text-center">BB003</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 3 -->
+
+                                                        <!-- 4 -->
+                                                        <tr>
+                                                            <td class="text-center">4</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>智慧局</td>
+                                                            <td class="text-center">BB004</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 4 -->
+
+                                                        <!-- 5 -->
+                                                        <tr>
+                                                            <td class="text-center">5</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>商業司</td>
+                                                            <td class="text-center">BB005</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 5 -->
+
+                                                        <!-- 6 -->
+                                                        <tr>
+                                                            <td class="text-center">6</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>能源局</td>
+                                                            <td class="text-center">BB006</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-danger text-center">停用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 6 -->
+
+                                                        <!-- 7 -->
+                                                        <tr>
+                                                            <td class="text-center">7</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>能源局</td>
+                                                            <td class="text-center">BB007</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 7 -->
+
+                                                        <!-- 8 -->
+                                                        <tr>
+                                                            <td class="text-center">8</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>智慧局</td>
+                                                            <td class="text-center">BB008</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 8 -->
+
+                                                        <!-- 9 -->
+                                                        <tr>
+                                                            <td class="text-center">9</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>商業司</td>
+                                                            <td class="text-center">BB009</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 9 -->
+
+                                                        <!-- 10 -->
+                                                        <tr>
+                                                            <td class="text-center">10</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>能源局</td>
+                                                            <td class="text-center">BB010</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-danger text-center">停用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 10 -->
+
+                                                        <!-- 11 -->
+                                                        <tr>
+                                                            <td class="text-center">11</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>商業司</td>
+                                                            <td class="text-center">BB011</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-danger text-center">停用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 11 -->
+
+                                                        <!-- 12 -->
+                                                        <tr>
+                                                            <td class="text-center">12</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>智慧局</td>
+                                                            <td class="text-center">BB012</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 12 -->
+
+                                                        <!-- 13 -->
+                                                        <tr>
+                                                            <td class="text-center">13</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>能源局</td>
+                                                            <td class="text-center">BB013</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 13 -->
+
+                                                        <!-- 14 -->
+                                                        <tr>
+                                                            <td class="text-center">14</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>智慧局</td>
+                                                            <td class="text-center">BB014</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 14 -->
+
+                                                        <!-- 15 -->
+                                                        <tr>
+                                                            <td class="text-center">15</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>商業司</td>
+                                                            <td class="text-center">BB015</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 15 -->
+
+                                                        <!-- 16 -->
+                                                        <tr>
+                                                            <td class="text-center">16</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>能源局</td>
+                                                            <td class="text-center">BB016</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-danger text-center">停用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 16 -->
+
+                                                        <!-- 17 -->
+                                                        <tr>
+                                                            <td class="text-center">17</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>能源局</td>
+                                                            <td class="text-center">BB017</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 17 -->
+
+                                                        <!-- 18 -->
+                                                        <tr>
+                                                            <td class="text-center">18</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>智慧局</td>
+                                                            <td class="text-center">BB018</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 18 -->
+
+                                                        <!-- 19 -->
+                                                        <tr>
+                                                            <td class="text-center">19</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>商業司</td>
+                                                            <td class="text-center">BB019</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-center">啟用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 19 -->
+
+                                                        <!-- 20 -->
+                                                        <tr>
+                                                            <td class="text-center">20</td>
+                                                            <td class="text-logo">書證上鏈</td>
+                                                            <td>能源局</td>
+                                                            <td class="text-center">BB020</td>
+                                                            <td>1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf</td>
+                                                            <td class="text-danger text-center">停用</td>
+                                                            <td class="text-center">
+                                                                <a href="javascript:;" class="btn btn-primary btn-sm waves-effect waves-light mr-1" data-toggle="modal" data-target=".edit_modal">
+                                                                    編輯
+                                                                </a>
+                                                                <a href="javascript:;" class="btn btn-warning btn-sm waves-effect waves-light mr-1">
+                                                                    檢視
+                                                                 </a>
+                                                                 <a href="javascript:;" class="btn btn-secondary btn-sm waves-effect" data-toggle="modal" data-target=".del_modal">
+                                                                    刪除
+                                                                </a>
+                                                            </td>
+                                                        </tr>
+                                                        <!--/ 20 -->
+                                                        
+                                                    
+                                                    
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr class="active">
+                                                            <td colspan="5">
+                                                                <div class="text-right d-flex justify-content-center">
+                                                                    <label class="form-inline mr-2">
+                                                                        每頁顯示
+                                                                        <select id="demo-show-entries" class="selectpicker form-control form-control-sm mx-1">
+                                                                            <option value="10">10</option>
+                                                                            <option value="20">20</option>
+                                                                            <option value="30">30</option>
+                                                                            <option value="40">40</option>
+                                                                        </select>
+                                                                        筆
+                                                                    </label>
+                                                                    <ul class="pagination pagination-split  footable-pagination m-t-10"></ul>
+                                                                </div>
+                                                                
+                                                            </td>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                            <!--/ 表格 -->
+                                           
+                                        </div>
+                                    </div> 
+                                    <!-- / card -->
+
+
+
+
+
+                                </div>
+                                <!--/ 中間內容區 -->
+
+
+
+                            </div>
+                        </div> 
+                        <!--/ 放內容 -->
+
+                    </div> 
+                    <!--/ container-fluid -->
+
+                </div> 
+                <!--/ content -->
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        © 2021 中華民國經濟部 Ministry of Economic Affairs,R.O.C. All rights reserved.
+                    </div>
+                </footer>
+                <!-- end Footer -->
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+            <!-- popUp -->
+
+            <!-- 連線帳號新增 export_modal-->
+            <div class="modal fade export_modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">連線帳號新增</h2>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row m-0">
+                                <div class="col-lg-6">
+                                    <!-- 服務名稱 -->
+                                    <div class="form-group row required">
+                                        <label class="col-12 col-sm-4 col-form-label"><sup>*</sup>服務名稱</label>
+                                        <div class="col-12 col-sm-8">
+                                            <select class="selectpicker">
+                                                <option value="請選擇">請選擇服務名稱</option>
+                                                <option value="全部"> 全部</option>
+                                                <option value="書證上鏈">書證上鏈</option>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <!--/ 服務名稱 -->
+
+
+                                     <!-- 連線帳號ID -->
+                                     <div class="form-group row required">
+                                        <label class="col-12 col-sm-4 col-form-label"><sup>*</sup>連線帳號ID</label>
+                                        <div class="col-12 col-sm-8">
+                                            <select class="selectpicker">
+                                                <option value="請選擇">請選擇線帳號ID</option>
+                                                <option value="">BB001</option>
+                                                <option value="">BB002</option>
+                                                <option value="">BB003</option>
+                                                <option value="">BB004</option>
+                                                <option value="">BB005</option>
+                                                <option value="">BB006</option>
+                                                <option value="">BB007</option>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <!--/ 連線帳號ID -->
+
+                                    <!-- 機關名稱 -->
+                                    <div class="form-group row required">
+                                        <label class="col-12 col-sm-4 col-form-label"><sup>*</sup>機關名稱</label>
+                                        <div class="col-12 col-sm-8">
+                                            <select class="selectpicker">
+                                                <option value="請選擇">請選擇機關名稱</option>
+                                                <option value="">商業司</option>
+                                                <option value="">能源局</option>
+                                                <option value="">智慧局</option>
+                                                <option value="">標準局</option>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <!--/ 機關名稱 -->
+
+                                    <!-- 電子信箱  -->
+                                    <div class="form-group row required">
+                                        <label class="col-12 col-sm-4 col-form-label"><sup>*</sup>電子信箱</label>
+                                        <div class="col-12 col-sm-8">
+                                            <input type="text" class="form-control" placeholder="請輸入電子信箱">
+                                        </div>
+                                    </div>
+                                    <!--/ 電子信箱  -->
+
+                                   
+
+
+                                </div>
+
+                                <div class="col-lg-6">
+
+
+                                    <!-- 區塊鏈ID  -->
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-4 col-form-label">區塊鏈ID</label>
+                                        <div class="col-12 col-sm-8">
+                                            <input type="text" class="form-control" value="此為系統提供" readonly>
+                                        </div>
+                                    </div>
+                                    <!--/ 區塊鏈ID  -->
+
+                                    <!-- 密碼  -->
+                                    <div class="form-group row required">
+                                        <label class="col-12 col-sm-4 col-form-label"><sup>*</sup>密碼</label>
+                                        <div class="col-12 col-sm-8">
+                                            <input type="password" class="form-control" placeholder="請輸入密碼">
+                                        </div>
+                                    </div>
+                                    <!--/ 密碼  -->
+
+
+
+                                    <!-- 管理者 -->
+                                    <div class="form-group row required">
+                                        <label class="col-12 col-sm-4 col-form-label"><sup>*</sup>管理者</label>
+                                        <div class="col-12 col-sm-8">
+                                            <select class="selectpicker">
+                                                <option value="請選擇">請選擇管理者</option>
+                                                <option value="">Harry</option>
+                                                <option value="">Marco</option>
+                                                <option value="">Eva</option>
+                                                <option value="">James</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                    <!--/ 管理者 -->
+
+                                    <!-- 狀態 -->
+                                    <div class="form-group row mb-3">
+                                        <label class="col-12 col-sm-4 col-form-label">狀態</label>
+                                        <div class="col-12 col-sm-8">
+                                            <ul class="d-inline-block mt-1">
+                                                <li>
+                                                    <div class="radio radio-inline radio-hide">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                                            <label class="custom-control-label" for="customRadio1">啟用</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="radio radio-inline radio-hide">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                                            <label class="custom-control-label" for="customRadio2">停用</label>
+                                                        </div>
+                                                    </div>                         
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                     <!--/ 狀態 -->
+
+                                </div>
+
+                                <div class="col-12">
+                                    <!-- 備註 -->
+                                    <div class="form-group row mb-3">
+                                        <label class="col-12 col-sm-2 col-form-label">備註</label>
+                                        <div class="col-12 col-sm-10">
+                                            <textarea class="form-control" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                    <!--/ 備註 -->
+                                </div>
+                            </div>
+                            <!-- end row -->
+                        </div>
+
+                        <div class="modal-footer">
+                            <a href="javascript:;"  class="register-btn btn btn-secondary btn-lg waves-effect waves-light mr-2" data-dismiss="modal">取消</a>
+                            <a href="javascript:;"  class="register-btn btn btn-warning btn-lg waves-effect waves-light" data-dismiss="modal" data-toggle="modal" data-target=".ok_modal">新增</a>
+                        </div>
+
+                    
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div>
+            <!-- /連線帳號新增 export_modal -->
+
+            <!-- ok Modal -->
+            <div class="modal fade ok_modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body p-4">
+                            <div class="text-center">
+                                <i class="fas fa-check-circle text-primary fa-4x"></i>
+                                <h3 class="mt-3 text-center">資料已新增</h3>
+                                    <a href="javascript:;" class="btn btn-warning btn-lg mt-3" data-dismiss="modal">確認</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ ok Modal -->
+
+            <!-- 連線帳號編輯 edit_modal-->
+            <div class="modal fade edit_modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2 class="modal-title">連線帳號編輯</h2>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row m-0">
+                                <div class="col-lg-6">
+                                    <!-- 服務名稱 -->
+                                    <div class="form-group row required">
+                                        <label class="col-12 col-sm-4 col-form-label"><sup>*</sup>服務名稱</label>
+                                        <div class="col-12 col-sm-8">
+                                            <select class="selectpicker">
+                                                <option value="請選擇">請選擇服務名稱</option>
+                                                <option value="全部"> 全部</option>
+                                                <option value="書證上鏈" selected>書證上鏈</option>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <!--/ 服務名稱 -->
+
+
+                                     <!-- 連線帳號ID -->
+                                     <div class="form-group row required">
+                                        <label class="col-12 col-sm-4 col-form-label"><sup>*</sup>連線帳號ID</label>
+                                        <div class="col-12 col-sm-8">
+                                            <select class="selectpicker">
+                                                <option value="請選擇">請選擇線帳號ID</option>
+                                                <option value="">BB001</option>
+                                                <option value="">BB002</option>
+                                                <option value="" selected>BB003</option>
+                                                <option value="">BB004</option>
+                                                <option value="">BB005</option>
+                                                <option value="">BB006</option>
+                                                <option value="">BB007</option>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <!--/ 連線帳號ID -->
+
+                                    <!-- 機關名稱 -->
+                                    <div class="form-group row required">
+                                        <label class="col-12 col-sm-4 col-form-label"><sup>*</sup>機關名稱</label>
+                                        <div class="col-12 col-sm-8">
+                                            <select class="selectpicker">
+                                                <option value="請選擇">請選擇機關名稱</option>
+                                                <option value="">商業司</option>
+                                                <option value="">能源局</option>
+                                                <option value="">智慧局</option>
+                                                <option value="" selected>標準局</option>
+                                            </select>   
+                                        </div>
+                                    </div>
+                                    <!--/ 機關名稱 -->
+
+                                    <!-- 電子信箱  -->
+                                    <div class="form-group row required">
+                                        <label class="col-12 col-sm-4 col-form-label"><sup>*</sup>電子信箱</label>
+                                        <div class="col-12 col-sm-8">
+                                            <input type="text" class="form-control" value="test@tradevan.com.tw">
+                                        </div>
+                                    </div>
+                                    <!--/ 電子信箱  -->
+
+                                   
+
+
+                                </div>
+
+                                <div class="col-lg-6">
+
+
+                                    <!-- 區塊鏈ID  -->
+                                    <div class="form-group row">
+                                        <label class="col-12 col-sm-4 col-form-label">區塊鏈ID</label>
+                                        <div class="col-12 col-sm-8">
+                                            <input type="text" class="form-control" value="1DckBL9QbU99vKNJKcv6BMWxNFtg8eo1Tf" readonly>
+                                        </div>
+                                    </div>
+                                    <!--/ 區塊鏈ID  -->
+
+                                    <!-- 密碼  -->
+                                    <div class="form-group row required">
+                                        <label class="col-12 col-sm-4 col-form-label"><sup>*</sup>密碼</label>
+                                        <div class="col-12 col-sm-8">
+                                            <input type="password" class="form-control" value="39248932">
+                                        </div>
+                                    </div>
+                                    <!--/ 密碼  -->
+
+
+
+                                    <!-- 管理者 -->
+                                    <div class="form-group row required">
+                                        <label class="col-12 col-sm-4 col-form-label"><sup>*</sup>管理者</label>
+                                        <div class="col-12 col-sm-8">
+                                            <select class="selectpicker">
+                                                <option value="請選擇">請選擇管理者</option>
+                                                <option value="">Harry</option>
+                                                <option value="" selected>Marco</option>
+                                                <option value="">Eva</option>
+                                                <option value="">James</option>
+                                            </select> 
+                                        </div>
+                                    </div>
+                                    <!--/ 管理者 -->
+
+                                    <!-- 狀態 -->
+                                    <div class="form-group row mb-3">
+                                        <label class="col-12 col-sm-4 col-form-label">狀態</label>
+                                        <div class="col-12 col-sm-8">
+                                            <ul class="d-inline-block mt-1">
+                                                <li>
+                                                    <div class="radio radio-inline radio-hide">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" checked>
+                                                            <label class="custom-control-label" for="customRadio1">啟用</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="radio radio-inline radio-hide">
+                                                        <div class="custom-control custom-radio">
+                                                            <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                                            <label class="custom-control-label" for="customRadio2">停用</label>
+                                                        </div>
+                                                    </div>                         
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                     <!--/ 狀態 -->
+
+                                </div>
+
+                                <div class="col-12">
+                                    <!-- 備註 -->
+                                    <div class="form-group row mb-3">
+                                        <label class="col-12 col-sm-2 col-form-label">備註</label>
+                                        <div class="col-12 col-sm-10">
+                                            <textarea class="form-control" rows="5"></textarea>
+                                        </div>
+                                    </div>
+                                    <!--/ 備註 -->
+                                </div>
+                            </div>
+                            <!-- end row -->
+                        </div>
+
+                        <div class="modal-footer">
+                            <a href="javascript:;"  class="register-btn btn btn-secondary btn-lg waves-effect waves-light mr-2" data-dismiss="modal">取消</a>
+                            <a href="javascript:;"  class="register-btn btn btn-warning btn-lg waves-effect waves-light" data-dismiss="modal" data-toggle="modal" data-target=".ok_modal">新增</a>
+                        </div>
+
+                    
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div>
+            <!-- /連線帳號編輯 edit_modal -->
+
+
+             <!-- del Modal -->
+            <div class="modal fade del_modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-body p-4">
+                            <div class="text-center">
+                                <i class="far fa-trash-alt text-primary fa-4x"></i>
+                                <h3 class="mt-3 text-center">確認刪除資料</h3>
+                                <p class="text-secondary">刪除後將無法復原。</p>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="javascript:;" class="btn btn-secondary btn-lg mr-2" data-dismiss="modal">確認</a>
+                            <a href="javascript:;"  class="btn btn-warning btn-lg waves-effect waves-light" data-dismiss="modal">取消</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/ del Modal -->
+
+
+
+
+        </div>
+        <!-- END wrapper -->
+
+        <!-- ============================================================== -->
+        <!-- Javascrip -->
+        <!-- ============================================================== -->
+
+        <!-- Vendor js -->
+        <script src="assets/js/vendor.min.js"></script>
+        <!-- App js -->
+        <script src="assets/js/app.min.js"></script>
+
+        <!-- Plugins js -->
+        <script src="assets/libs/footable/footable.all.min.js"></script>
+        <script src="assets/js/foo-tables.init.js"></script>
+        <script src="assets/libs/bootstrap-select/js/bootstrap-select.min.js"></script>
+
+        <!-- custom js -->
+        
+    </body>
+</html>

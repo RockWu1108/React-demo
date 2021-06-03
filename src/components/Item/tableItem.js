@@ -12,7 +12,7 @@ import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import CancelIcon from '@material-ui/icons/Cancel';
 import ReportProblemIcon from '@material-ui/icons/ReportProblem';
 import { green } from '@material-ui/core/colors';
-import {Link} from 'react-router-dom';
+import {Link ,useHistory } from 'react-router-dom';
 const useStyles = makeStyles({
   root: {
     width: 'auto',
@@ -37,6 +37,7 @@ const columns = [
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const history = useHistory();
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
   };
@@ -45,6 +46,14 @@ const columns = [
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
+
+  const handleTableRow = (row) =>{
+    history.push({
+           pathname: '/dashboard',
+           state: { nodeName: row.nodeName }
+    });
+
+  }
 
   return (
     <Paper className={classes.root}>
@@ -68,7 +77,8 @@ const columns = [
             {tableData.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row ,index) => {
              return (
                
-                <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
+                <TableRow hover  tabIndex={-1} key={row.id}  onClick={()=>handleTableRow(row)}
+                >
 
                   <TableCell  align="left" >
                     {row.id}
@@ -88,7 +98,7 @@ const columns = [
                   </TableCell>
                   
                   <TableCell align="left">
-                    {2131}
+                    {row.blockNumber !== 0 ? row.blockNumber : 0}
                   </TableCell>
 
                   <TableCell align="left">

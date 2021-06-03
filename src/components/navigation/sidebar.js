@@ -4,7 +4,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import SingleItem from './singleItem';
 import MutiItem from './mutiItem';
 
-const Sidebar = () => {
+const Sidebar = ({handleDrawerClose}) => {
 
    //帳號管理List
   const accounts = [
@@ -54,25 +54,25 @@ const Sidebar = () => {
   return (
   <List>
       {/* 帳號管理 */}
-      <MutiItem  title ="帳號管理" itemArray={accounts}/>
+      <MutiItem  title ="帳號管理" itemArray={accounts} handleDrawerClose={handleDrawerClose}/>
 
       {/* 組織管理 */}  
-      <SingleItem title="組織管理" path="./" /> 
+      <SingleItem title="組織管理" path="./" handleDrawerClose={handleDrawerClose}/> 
 
       {/* 權限管理 */}  
-      <SingleItem title="權限管理" path="./grid" />
+      <SingleItem title="權限管理" path="./grid" handleDrawerClose={handleDrawerClose}/>
 
       {/* 帳號清查管理 */}
-      <MutiItem  title ="帳號清查管理" itemArray={users}/>
+      <MutiItem  title ="帳號清查管理" itemArray={users}handleDrawerClose={handleDrawerClose}/>
 
       {/* 區塊鏈管理 */}
-      <MutiItem  title ="區塊鏈管理" itemArray={blockChain}/>
+      <MutiItem  title ="區塊鏈管理" itemArray={blockChain}handleDrawerClose={handleDrawerClose}/>
 
       {/* 書證管理 */}  
-      <SingleItem title="書證管理" path="./grid" />
+      <SingleItem title="書證管理" path="./grid" handleDrawerClose={handleDrawerClose}/>
 
       {/* 日誌管理 */}  
-      <SingleItem title="日誌管理" path="./grid" />
+      <SingleItem title="日誌管理" path="./grid" handleDrawerClose={handleDrawerClose}/>
 
   </List>
   );

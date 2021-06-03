@@ -111,17 +111,19 @@ const MarerialUIDrawer = () => {
         variant="persistent"
         anchor="left"
         open={open}
+        onClose={handleDrawerClose}
         classes={{
           paper: classes.drawerPaper,
         }}
       >
         <div className={classes.drawerHeader}>
+          {/* 返回鍵 */}
           <IconButton onClick={handleDrawerClose}>
             {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
           </IconButton>
         </div>
 
-       <Sidebar/>
+       <Sidebar handleDrawerClose={handleDrawerClose}/>
 
       </Drawer>
       <main

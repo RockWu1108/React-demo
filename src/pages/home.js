@@ -1,4 +1,6 @@
 import React from 'react';
+import SockJsClient from 'react-stomp';
+
 const styles = {
 home: {
 	padding: '50px',
@@ -9,11 +11,11 @@ home: {
 };
 const Home = () => {
 
+	
 return(
-	<div style={styles.home}>
-		<h1>Home Page</h1>
-		<p>This is the Landing Page of the Application</p>
-	</div>
+	<div>
+             
+      </div>
 )}
 
 export default Home

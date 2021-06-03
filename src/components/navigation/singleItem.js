@@ -6,11 +6,11 @@ import ListItemText from '@material-ui/core/ListItemText';
 import {Link} from 'react-router-dom';
 import SendIcon from '@material-ui/icons/Send';
 
-const SingleItem = ({title , path ,styleIcon}) => {
+const SingleItem = ({title , path ,styleIcon ,handleDrawerClose}) => {
     return (
     <div>
          <Link to={path} style={{ textDecoration: 'none' ,color: 'inherit'}}>
-            <ListItem button>
+            <ListItem button onClick={handleDrawerClose}>
                 <ListItemIcon>
                     <SendIcon />
                 </ListItemIcon>

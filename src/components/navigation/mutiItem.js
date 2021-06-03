@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(4),
   },
 }));
-  const MutiItem = ({title ,itemArray}) =>{
+  const MutiItem = ({title ,itemArray,handleDrawerClose}) =>{
 
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
                 itemArray.map((arr , index) =>(
                   <List component="nav" disablePadding key={arr.name}>
                     <Link to={arr.path} style={{ textDecoration: 'none' ,color: 'inherit'}}>
-                          <ListItem button className={classes.nested} key = {arr.name}>
+                          <ListItem button className={classes.nested} key = {arr.name} onClick={handleDrawerClose}>
                               <ListItemIcon key={arr.name}>
                                   {arr.icon}
                               </ListItemIcon>

@@ -13,13 +13,19 @@ const NodeState =() => {
     },[])
  
     const loadMoreCoin = () =>{
-        fetch(NODE_API)
-        .then(res => {
-            return res.json(); 
-        }).then(data =>{
-            console.log(data);
-            setNodeData(nodeData.concat(data));
-        })
+        fetch(NODE_API, {
+            method: 'GET',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${localStorage.getItem("JWT")}`
+            }
+        } )
+        .then( res => res.json() )
+        .then( res => {
+            console.log(res);
+            setNodeData(nodeData.concat(res));
+        } );
     }
 
     return (
