@@ -54,7 +54,7 @@ export default function Login() {
   const handleSubmit = (event) =>{
     event.preventDefault();
     console.log( 'Email:', email, 'Password: ', password); 
-    const API = "http://127.0.0.1:8100/api/account/authenticate"
+    const API = "http://127.0.0.1:8000/api/account/authenticate"
 
     fetch(API, {
         method: 'POST',

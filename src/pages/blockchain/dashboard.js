@@ -12,10 +12,10 @@ const Dashboard = () => {
     let qm = "";
     if(location.state !== undefined){
       const nodeName = location.state.nodeName;
-      qm=`http://127.0.0.1:8100/${nodeName}`
+      qm=`http://127.0.0.1:8000/${nodeName}`
     }
     else{
-      qm="http://127.0.0.1:8100/node1";
+      qm="http://127.0.0.1:8000/node1";
     }
     
     return (

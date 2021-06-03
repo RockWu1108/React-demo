@@ -25,7 +25,7 @@ const Sidebar = ({handleDrawerClose}) => {
 
     {
         name: '通知信維護',
-         path: '/grid',
+         path: '/',
          icon :<InboxIcon/>
     },
   ]
@@ -34,7 +34,7 @@ const Sidebar = ({handleDrawerClose}) => {
   const blockChain = [
     {
         name: "連線帳號管理", 
-        path : "/" ,
+        path : "/UserLoginController" ,
          icon : <InboxIcon/>
     },
 
@@ -60,7 +60,7 @@ const Sidebar = ({handleDrawerClose}) => {
       <SingleItem title="組織管理" path="./" handleDrawerClose={handleDrawerClose}/> 
 
       {/* 權限管理 */}  
-      <SingleItem title="權限管理" path="./grid" handleDrawerClose={handleDrawerClose}/>
+      <SingleItem title="權限管理" path="./" handleDrawerClose={handleDrawerClose}/>
 
       {/* 帳號清查管理 */}
       <MutiItem  title ="帳號清查管理" itemArray={users}handleDrawerClose={handleDrawerClose}/>
@@ -69,10 +69,10 @@ const Sidebar = ({handleDrawerClose}) => {
       <MutiItem  title ="區塊鏈管理" itemArray={blockChain}handleDrawerClose={handleDrawerClose}/>
 
       {/* 書證管理 */}  
-      <SingleItem title="書證管理" path="./grid" handleDrawerClose={handleDrawerClose}/>
+      <SingleItem title="書證管理" path="./" handleDrawerClose={handleDrawerClose}/>
 
       {/* 日誌管理 */}  
-      <SingleItem title="日誌管理" path="./grid" handleDrawerClose={handleDrawerClose}/>
+      <SingleItem title="日誌管理" path="./" handleDrawerClose={handleDrawerClose}/>
 
   </List>
   );

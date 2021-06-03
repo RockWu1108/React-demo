@@ -1,11 +1,11 @@
 import React , {useState, useEffect} from 'react'
-import BoxItem from '../components/Item/boxItem'
-import TableItem from '../components/Item/tableItem'
+import BoxItem from '../blockchain/components/Item/boxItem'
+import TableItem from '../blockchain/components/Item/tableItem'
 
 
 const NodeState =() => {
 
-    const NODE_API ="http://127.0.0.1:8100/node/getPeerInfo";
+    const NODE_API ="http://127.0.0.1:8000/node/getPeerInfo";
     const [nodeData , setNodeData] = useState([]);
 
     useEffect(()=>{
